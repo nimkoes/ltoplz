@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### custom ###
-*.env
+secret.yml
