@@ -1,11 +1,4 @@
-server:
-  port: 7878
-
 spring:
-  config:
-    additional-location: classpath:/prop.env
-  profiles:
-    active: local
   datasource:
     driver-class-name: org.h2.Driver
     url:
@@ -18,9 +11,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
-    properties:
-      hibernate.format_sql: true
+      ddl-auto: validate
 
 logging.level:
   org.hibernate.SQL: debug
