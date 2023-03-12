@@ -25,5 +25,14 @@ public class DrwModel {
 
     @QueryProjection
     public DrwModel(DrwMasterEntity drwMasterEntity) {
+        this.drwNo = drwMasterEntity.getDrwNo();
+        this.drwNoDate = drwMasterEntity.getIssueDt();
+        this.drwtNo1 = drwMasterEntity.getDrwtNo1();
+        this.drwtNo2 = drwMasterEntity.getDrwtNo2();
+        this.drwtNo3 = drwMasterEntity.getDrwtNo3();
+        this.drwtNo4 = drwMasterEntity.getDrwtNo4();
+        this.drwtNo5 = drwMasterEntity.getDrwtNo5();
+        this.drwtNo6 = drwMasterEntity.getDrwtNo6();
+        this.bnusNo = drwMasterEntity.getBnusNo();
     }
 }
