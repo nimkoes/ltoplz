@@ -4,6 +4,7 @@ import lombok.Data;
 import me.nimkoes.ltoplz.model.DrwModel;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Data
@@ -15,30 +16,40 @@ public class DrwMasterEntity {
     @Column(name = "ID")
     private Long id;
 
+    @NotNull
     @Column(name = "DRW_NO")
     private Long drwNo;
 
+    @NotNull
+    @Temporal(TemporalType.DATE)
     @Column(name = "ISSUE_DT")
     private LocalDate issueDt;
 
+    @NotNull
     @Column(name = "DRWT_NO_1")
     private Integer drwtNo1;
 
+    @NotNull
     @Column(name = "DRWT_NO_2")
     private Integer drwtNo2;
 
+    @NotNull
     @Column(name = "DRWT_NO_3")
     private Integer drwtNo3;
 
+    @NotNull
     @Column(name = "DRWT_NO_4")
     private Integer drwtNo4;
 
+    @NotNull
     @Column(name = "DRWT_NO_5")
     private Integer drwtNo5;
 
+    @NotNull
     @Column(name = "DRWT_NO_6")
     private Integer drwtNo6;
 
+    @NotNull
     @Column(name = "BONUS_NO")
     private Integer bnusNo;
 
