@@ -1,8 +1,12 @@
 package me.nimkoes.ltoplz.entity;
 
+import lombok.Data;
+import me.nimkoes.ltoplz.model.DrwModel;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name = "DRW_MASTER")
 public class DrwMasterEntity {
@@ -38,4 +42,19 @@ public class DrwMasterEntity {
     @Column(name = "BONUS_NO")
     private Integer bnusNo;
 
+    public static DrwMasterEntity byDrwModel(DrwModel drwModel) {
+        DrwMasterEntity entity = new DrwMasterEntity();
+
+        entity.setDrwNo(drwModel.getDrwNo());
+        entity.setIssueDt(drwModel.getDrwNoDate());
+        entity.setDrwtNo1(drwModel.getDrwtNo1());
+        entity.setDrwtNo2(drwModel.getDrwtNo2());
+        entity.setDrwtNo3(drwModel.getDrwtNo3());
+        entity.setDrwtNo4(drwModel.getDrwtNo4());
+        entity.setDrwtNo5(drwModel.getDrwtNo5());
+        entity.setDrwtNo6(drwModel.getDrwtNo6());
+        entity.setBnusNo(drwModel.getBnusNo());
+
+        return entity;
+    }
 }
