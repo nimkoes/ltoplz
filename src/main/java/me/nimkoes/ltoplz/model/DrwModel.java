@@ -1,8 +1,10 @@
 package me.nimkoes.ltoplz.model;
 
+import com.querydsl.core.annotations.QueryProjection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import me.nimkoes.ltoplz.entity.DrwMasterEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -20,9 +22,8 @@ public class DrwModel {
     private Integer drwtNo5;
     private Integer drwtNo6;
     private Integer bnusNo;
-    private Long firstAccumamnt;
-    private Long firstPrzwnerCo;
-    private Long firstWinamnt;
-    private String returnValue;
-    private Long totSellamnt;
+
+    @QueryProjection
+    public DrwModel(DrwMasterEntity drwMasterEntity) {
+    }
 }

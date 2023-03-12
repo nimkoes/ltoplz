@@ -21,8 +21,7 @@ public class DrwMasterEntity {
     private Long drwNo;
 
     @NotNull
-    @Temporal(TemporalType.DATE)
-    @Column(name = "ISSUE_DT")
+    @Column(name = "ISSUE_DT", columnDefinition = "DATE")
     private LocalDate issueDt;
 
     @NotNull

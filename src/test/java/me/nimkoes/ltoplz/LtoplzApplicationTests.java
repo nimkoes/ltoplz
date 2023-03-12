@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Commit;
 import org.springframework.test.context.ActiveProfiles;
 
 import javax.persistence.EntityManager;
@@ -18,6 +17,7 @@ import java.time.LocalDate;
 import static me.nimkoes.ltoplz.entity.QDrwMasterEntity.drwMasterEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Transactional
 @SpringBootTest
 @ActiveProfiles("local")
 class LtoplzApplicationTests {
@@ -32,17 +32,12 @@ class LtoplzApplicationTests {
 
         DrwModel drwModel = new DrwModel(
                 1L, LocalDate.now(),
-                12, 21, 34, 3, 5, 6, 27,
-                null, null, null, null, null);
+                12, 21, 34, 3, 5, 6, 27);
 
-        DrwMasterEntity drwMasterEntity = DrwMasterEntity.byDrwModel(drwModel);
-
-        em.persist(drwMasterEntity);
+        em.persist(DrwMasterEntity.byDrwModel(drwModel));
     }
 
     @Test
-    @Transactional
-    @Commit
     public void test() {
         DrwMasterEntity result = queryFactory
                 .selectFrom(drwMasterEntity)
