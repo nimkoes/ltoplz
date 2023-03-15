@@ -1,4 +1,4 @@
-package me.nimkoes.ltoplz.entity;
+package me.nimkoes.ltoplz.domain.entity;
 
 import lombok.Getter;
 import me.nimkoes.ltoplz.model.DrwModel;

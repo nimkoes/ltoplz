@@ -1,5 +1,6 @@
 package me.nimkoes.ltoplz.entity;
 
+import me.nimkoes.ltoplz.domain.entity.DrwMasterEntity;
 import me.nimkoes.ltoplz.model.DrwModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -4,7 +4,7 @@ import com.querydsl.core.annotations.QueryProjection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import me.nimkoes.ltoplz.entity.DrwMasterEntity;
+import me.nimkoes.ltoplz.domain.entity.DrwMasterEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
